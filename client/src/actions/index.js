@@ -8,7 +8,8 @@ export const getData = () => {
   return dispatch => {
     dispatch({ type: FETCH_ART_DATA_START });
     axios
-      .get(`https://collectionapi.metmuseum.org/public/collection/v1/objects/1`)
+    //   .get(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${num}`)
+      .get(`http://jservice.io/api/random`)
       .then(res => {
         dispatch({ type: FETCH_ART_DATA_SUCCESS, payload: res.data });
       })

@@ -1,26 +1,30 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import { connect } from 'react-redux'
 import {getData} from './actions'
+import Question from './components/Question'
+import jeopardy from './img/jeopardy-logo.png'
 
 function App(props) {
+  const [result, setResult] = useState(null);
   const handleClick = (e) => {
     e.preventDefault()
+    setResult(null)
     props.getData()
 
   }
-  console.log(props.art)
   return (
     <div className="App">
-      <h1>{props.art && props.art.artistDisplayName}</h1>
-      <button onClick={handleClick}>Get Art</button>
+      <img style={{margin: '0 auto'}} src={jeopardy} alt='jeopardy logo'  height='272' width='640'/>
+      {props.quiz[0] && <Question quiz={props.quiz[0]} setResult={setResult} result={result} />}
+      <button className='btn' onClick={handleClick}>Get Question</button>
     </div>
   );
 }
 
 const mapStateToProps = state => {
   return {
-    art: state.art
+    quiz: state.quiz,
   }
 }
 

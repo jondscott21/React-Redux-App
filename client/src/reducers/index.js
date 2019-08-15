@@ -1,7 +1,7 @@
 import {FETCH_ART_DATA_START, FETCH_ART_DATA_SUCCESS, FETCH_ART_DATA_FAILURE} from '../actions'
 
 const initialState = {
-    art: {},
+    quiz: {},
     error: "",
     isFetching: true
   };
@@ -17,7 +17,7 @@ const initialState = {
         case FETCH_ART_DATA_SUCCESS:  
             return {
                 ...state,
-                art: action.payload,
+                quiz: action.payload,
                 isFetching: false,
                 error: ''
             }
