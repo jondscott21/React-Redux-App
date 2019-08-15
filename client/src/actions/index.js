@@ -8,10 +8,8 @@ export const getData = () => {
   return dispatch => {
     dispatch({ type: FETCH_ART_DATA_START });
     axios
-      .get('https://api.oceandrivers.com:443/v1.0/getWebCams/')
+      .get(`https://collectionapi.metmuseum.org/public/collection/v1/objects/1`)
       .then(res => {
-        // res.data.data
-        console.log(res);
         dispatch({ type: FETCH_ART_DATA_SUCCESS, payload: res.data });
       })
       .catch(err => {
