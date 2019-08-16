@@ -13,7 +13,6 @@ function App(props) {
     e.preventDefault()
     dispatch(getData())
     setResult(null)
-
   }
   // 'props' changed to state for hooks
   return (

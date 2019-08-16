@@ -1,4 +1,4 @@
-import {FETCH_ART_DATA_START, FETCH_ART_DATA_SUCCESS, FETCH_ART_DATA_FAILURE} from '../actions'
+import {FETCH_DATA_START, FETCH_DATA_SUCCESS, FETCH_DATA_FAILURE} from '../actions'
 
 const initialState = {
     quiz: {},
@@ -8,20 +8,20 @@ const initialState = {
 
   export const reducer = (state = initialState, action) => {
     switch(action.type) {
-        case FETCH_ART_DATA_START:
+        case FETCH_DATA_START:
             return {
                 ...state,
                 error: 'start failed',
                 isFetching: true
             }
-        case FETCH_ART_DATA_SUCCESS:  
+        case FETCH_DATA_SUCCESS:  
             return {
                 ...state,
                 quiz: action.payload,
                 isFetching: false,
                 error: ''
             }
-        case FETCH_ART_DATA_FAILURE: {
+        case FETCH_DATA_FAILURE: {
             return {
                 ...state,
                 error: action.payload

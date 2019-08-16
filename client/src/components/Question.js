@@ -10,10 +10,13 @@ export default function Question(props)  {
     };
 
     const handleSubmit = (event) => {
+        let checkedStr = props.quiz.answer.toLowerCase()
+        checkedStr = checkedStr.replace('<i>', '')
+        checkedStr = checkedStr.replace('</i>', '')
+        checkedStr = checkedStr.replace('/', '')
+        console.log(checkedStr)
         event.preventDefault();
-        console.log(answer)
-        console.log(props.quiz.answer)
-        if (props.quiz.answer.toLowerCase() === answer.toLowerCase()) {
+        if ( checkedStr === answer.toLowerCase()) {
             console.log(true)
             props.setResult(true)
             setAnswer('')
