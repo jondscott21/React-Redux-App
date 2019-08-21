@@ -19,7 +19,7 @@ function App(props) {
     <div className="App">
       <img style={{margin: '0 auto'}} src={jeopardy} alt='jeopardy logo'  height='272' width='640'/>
       {state.quiz[0] && <Question quiz={state.quiz[0]} setResult={setResult} result={result} />}
-      <button className='btn' onClick={handleClick}>Get Question</button>
+      <button className='btn' onClick={handleClick}>Get A Question</button>
     </div>
   );
 }

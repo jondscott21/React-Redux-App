@@ -8,7 +8,7 @@ export const getData = () => {
   return dispatch => {
     dispatch({ type: FETCH_DATA_START });
     axios
-      .get(`http://jservice.io/api/random`)
+      .get(`https://jservice.io/api/random`)
       .then(res => {
         dispatch({ type: FETCH_DATA_SUCCESS, payload: res.data });
       })
