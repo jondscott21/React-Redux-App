@@ -1,0 +1,45 @@
+html {
+  background: #2B2E3F;
+  
+}
+
+h1, h2, h3, p, button, label  {
+  font-family: Roboto, sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.quiz-wrapper {
+  margin: 50px auto;
+  color: white;
+  background-color: #00458A;
+  height: 500px;
+  width: 600px;
+}
+.form {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+#answer {
+  margin: 10px auto;
+  width: 50%;
+}
+.btn {
+  margin: 10px auto;
+  width: 30%;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+}
+.right {
+  color: green;
+}
+.wrong {
+  color: red;
+}
+
